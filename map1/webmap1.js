@@ -1,7 +1,7 @@
-let myMap = L.map('map1').setView([30, -90], 6)
+let myMap = L.map('map1').setView([30, -90], 8)
 //L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_nolabels/{z}/{x}/{y}.png').addTo(myMap)
 var OpenStreetMap_BlackAndWhite = L.tileLayer('https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
-	maxZoom: 10,
+	maxZoom: 18,
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(myMap);
 let nolaPoint = L.marker([29.958941, -90.064618]).addTo(myMap)
