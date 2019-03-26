@@ -4,11 +4,12 @@ var OpenStreetMap_BlackAndWhite = L.tileLayer('https://tiles.wmflabs.org/bw-mapn
 	maxZoom: 18,
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(myMap);
-let nolaPoint = L.marker([30, -90]).addTo(myMap)
+let nolaPoint = L.marker([29.958941, -90.064618]).addTo(myMap)
 let myPolygon = L.polygon([
-  [30, -90],
-  [31, -91],
-  [32, -90],
+  [30.047962, -90.279463],
+  [29.914709, -90266568],
+  [29.917677, -90.001626],
+  [30.039644, -90.00008673],
 ]).addTo(myMap);
 
 myPolygon.bindPopup('A polygon')
