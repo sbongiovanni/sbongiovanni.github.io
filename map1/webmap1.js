@@ -7,7 +7,7 @@ var OpenStreetMap_BlackAndWhite = L.tileLayer('https://tiles.wmflabs.org/bw-mapn
 let nolaPoint = L.marker([29.958941, -90.064618]).addTo(myMap)
 let myPolygon = L.polygon([
   [30.047962, -90.279463],
-  [29.914709, -90266568],
+  [29.914709, -90.266568],
   [29.917677, -90.001626],
   [30.039644, -90.00008673],
 ]).addTo(myMap);
