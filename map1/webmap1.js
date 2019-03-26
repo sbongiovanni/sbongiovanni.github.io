@@ -10,6 +10,11 @@ let myPolygon = L.polygon([
   [29.914709, -90.266568],
   [29.917677, -90.001626],
 ]).addTo(myMap);
+let MetairieNolaLine = L.polygon([
+  [30.031052, -90.119940],
+  [29.909986, -90.151926]
+]).addTo(myMap);
 
 myPolygon.bindPopup('New Orleans Metro Area')
 nolaPoint.bindPopup('<strong>French Quarter</strong>')
+MetairieNolaLine.bindPopup ('City Line')
