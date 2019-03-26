@@ -12,5 +12,5 @@ let myPolygon = L.polygon([
   [30.039644, -90.00008673],
 ]).addTo(myMap);
 
-myPolygon.bindPopup('A polygon')
-nolaPoint.bindPopup('A <strong>marker</strong>')
+myPolygon.bindPopup('New Orleans Metro Area')
+nolaPoint.bindPopup('A <strong>French Quarter</strong>')
