@@ -12,4 +12,4 @@ let myPolygon = L.polygon([
 ]).addTo(myMap);
 
 myPolygon.bindPopup('New Orleans Metro Area')
-nolaPoint.bindPopup('A <strong>French Quarter</strong>')
+nolaPoint.bindPopup('<strong>French Quarter</strong>')
