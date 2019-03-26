@@ -6,10 +6,9 @@ var OpenStreetMap_BlackAndWhite = L.tileLayer('https://tiles.wmflabs.org/bw-mapn
 }).addTo(myMap);
 let nolaPoint = L.marker([29.958941, -90.064618]).addTo(myMap)
 let myPolygon = L.polygon([
-  [30.047962, -90.279463],
+  [30.051098, -90.148126],
   [29.914709, -90.266568],
   [29.917677, -90.001626],
-  [30.039644, -90.00008673],
 ]).addTo(myMap);
 
 myPolygon.bindPopup('New Orleans Metro Area')
