@@ -7,6 +7,7 @@ jQuery.getJSON(stateDemographicsUrl, function (data) {
 let stateStyle = { color: 'green' }
 let stateGeojsonOptions = { style: stateStyle }
 L.geoJSON(data, stateGeojsonOptions).addTo(us)
+
 let stateDemographicsUrl = 'https://opendata.arcgis.com/datasets/63aa98f68bd54e528d7a75e6cf2492bd_0.geojson'
 jQuery.getJSON(stateDemographicsUrl, function (data) {
   L.geoJSON(data).addTo(us)
