@@ -1,4 +1,4 @@
-let us = L.map('webmap3').setView([30, -90], 12);
+let us = L.map('webmap3').setView([29.956266, -90.078287], 14);
 	L.tileLayer('https://maps.heigit.org/openmapsurfer/tiles/roads/webmercator/{z}/{x}/{y}.png').addTo(us);
 let bikeshareareaURL = 'https://opendata.arcgis.com/datasets/63aa98f68bd54e528d7a75e6cf2492bd_1.geojson'
 jQuery.getJSON(bikeshareareaURL, function (data) {
@@ -18,5 +18,3 @@ jQuery.getJSON(bikesharestationsURL, function (data) {
   };
   L.geoJSON(data, parksGeojsonOptions).addTo(us);
 	})
-
-bikeshareareaURL.bindPopup('Bike Share Service Area')
