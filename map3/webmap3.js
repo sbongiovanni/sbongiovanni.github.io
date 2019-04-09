@@ -11,7 +11,7 @@ jQuery.getJSON(bikesharestationsURL, function (data) {
       let stationnumber = feature.properties.Station_Name;
       let rackspaces = feature.properties.Number_of_Rack_Spaces;
       let sign = feature.properties.Sign_Type;
-       layer.bindPopup( stationnumber + sign + 'Number of Rack Spaces' + ':' + rackspaces ' ' )
+       layer.bindPopup( stationnumber + sign + 'Number of Rack Spaces' + ':' + rackspaces )
   };
   let parksGeojsonOptions = {
     style: stateStyle,
