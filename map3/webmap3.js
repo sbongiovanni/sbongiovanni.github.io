@@ -14,7 +14,6 @@ jQuery.getJSON(bikesharestationsURL, function (data) {
        layer.bindPopup( stationnumber + sign + 'Number of Rack Spaces' + ':' + rackspaces )
   };
   let parksGeojsonOptions = {
-    style: stateStyle,
     onEachFeature: onEachFeature
   };
   L.geoJSON(data, parksGeojsonOptions).addTo(us);
