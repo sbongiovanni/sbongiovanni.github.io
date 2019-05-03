@@ -1,4 +1,4 @@
-let ebr = L.map('webmap3').setView([30.52, -91.095644], 10);
+let ebr = L.map('webmap3').setView([29, -90], 10);
 let basemap = 'https://maps.heigit.org/openmapsurfer/tiles/roads/webmercator/{z}/{x}/{y}.png';
 L.tileLayer(basemap).addTo(ebr);
 let ebrDemographicsUrl = 'https://opendata.arcgis.com/datasets/d7a7c859cb464d699e77619416528e2a_0.geojson';
@@ -36,4 +36,8 @@ jQuery.getJSON(ebrDemographicsUrl, function (data) {
     onEachFeature: onEachFeature
   }
   L.geoJSON(data, wardGeojsonOptions).addTo(ebr)
+})
+let routesURL = 'https://opendata.arcgis.com/datasets/359c2444a951467991b8a7aa63d18930_0.geojson'
+jQuery.getJSON(routesURL, function (data) {
+  L.geoJSON(data).addTo(us)
 })
