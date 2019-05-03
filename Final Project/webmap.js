@@ -1,6 +1,6 @@
-let ebr = L.map('webmap3').setView([29, -90], 10);
+let nola = L.map('webmap3').setView([29, -90], 10);
 let basemap = 'https://maps.heigit.org/openmapsurfer/tiles/roads/webmercator/{z}/{x}/{y}.png';
-L.tileLayer(basemap).addTo(ebr);
+L.tileLayer(basemap).addTo(nola);
 let ebrDemographicsUrl = 'https://opendata.arcgis.com/datasets/d7a7c859cb464d699e77619416528e2a_0.geojson';
 jQuery.getJSON(ebrDemographicsUrl, function (data) {
   let wardStyle = function (feature) {
@@ -35,9 +35,9 @@ jQuery.getJSON(ebrDemographicsUrl, function (data) {
     style: wardStyle,
     onEachFeature: onEachFeature
   }
-  L.geoJSON(data, wardGeojsonOptions).addTo(ebr)
+  L.geoJSON(data, wardGeojsonOptions).addTo(nola)
 })
-let routesURL = 'https://opendata.arcgis.com/datasets/359c2444a951467991b8a7aa63d18930_0.geojson'
+let firstaidURL = 'https://opendata.arcgis.com/datasets/7c64080061a5480288fe64afd1bcea1d_0.geojson'
 jQuery.getJSON(routesURL, function (data) {
-  L.geoJSON(data).addTo(us)
+  L.geoJSON(data).addTo(nola)
 })
