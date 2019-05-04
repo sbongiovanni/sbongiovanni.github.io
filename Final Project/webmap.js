@@ -5,10 +5,6 @@ jQuery.getJSON(nolaparksUrl, function (data) {
   let parkStyle = function (feature) {
     let park = feature.properties.SHAPE
     let parkColor = 'green'
-    {
-      color: parkColor,
-      fillOpacity: 0.3
-    }
   }
     let onEachFeature = function (feature, layer) {
       let name = feature.properties.NAME
