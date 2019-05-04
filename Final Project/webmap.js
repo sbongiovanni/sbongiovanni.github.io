@@ -3,14 +3,11 @@ let basemap = 'https://maps.heigit.org/openmapsurfer/tiles/roads/webmercator/{z}
 L.tileLayer(basemap).addTo(nola);
 let nolaparksUrl = 'https://opendata.arcgis.com/datasets/3273a5f8334d40838681ff0337eddb8c_0.geojson';
 jQuery.getJSON(nolaparksUrl, function (data) {
-  let wardStyle = function (feature) {
-    let ward = feature.properties.WARD
-    let wardColor = 'blue'
-    if ( ward=='1'  ) { wardColor = '#00447b' }
-    else if ( ward=='2'  ) { wardColor = '#de4429' }
-    else { wardColor = '#757575' }
-    return {
-      color: wardColor,
+  let parkStyle = function (feature) {
+    let park = feature.properties.SHAPE
+    let parkColor = 'green'
+    {
+      color: parkColor,
       weight: 1.5,
       fillOpacity: 0.3
     }
