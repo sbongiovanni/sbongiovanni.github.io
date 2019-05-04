@@ -1,8 +1,8 @@
 let nola = L.map('webmap3').setView([29, -90], 10);
 let basemap = 'https://maps.heigit.org/openmapsurfer/tiles/roads/webmercator/{z}/{x}/{y}.png';
 L.tileLayer(basemap).addTo(nola);
-let ebrDemographicsUrl = 'https://opendata.arcgis.com/datasets/d7a7c859cb464d699e77619416528e2a_0.geojson';
-jQuery.getJSON(ebrDemographicsUrl, function (data) {
+let nolaparksUrl = 'https://opendata.arcgis.com/datasets/3273a5f8334d40838681ff0337eddb8c_0.geojson';
+jQuery.getJSON(nolaparksUrl, function (data) {
   let wardStyle = function (feature) {
     let ward = feature.properties.WARD
     let wardColor = 'blue'
@@ -16,29 +16,16 @@ jQuery.getJSON(ebrDemographicsUrl, function (data) {
     }
   }
     let onEachFeature = function (feature, layer) {
-      let vprecinct = feature.properties.VOTING_PRECINCT_NAME
-      let ward = feature.properties.WARD
-      let precinct = feature.properties.PRECINCT
-      let totpop = feature.properties.TOTAL_POPULATION
-      let wpop = feature.properties.WHITE_POPULATION
-      let bpop = feature.properties.BLACK_POPULATION
-      let opop = feature.properties.OTHER_POPULATION
-      let mc = feature.properties.METRO_COUNCIL
-      let cd = feature.properties.US_HOUSE
-      let psc = feature.properties.PSC
-      let bese = feature.properties.BESE
-      let lahouse = feature.properties.LA_HOUSE
-      let lasenate = feature.properties.LA_SENATE
-      layer.bindPopup('Voting Precinct: ' + vprecinct + '<br>Ward: ' + ward + '<br>Precinct: ' + precinct + '<br>Total Population: ' + totpop + '<br>White Population: ' + wpop + '<br>Black Population: ' + bpop + '<br>Other Population: ' + opop + '<br>Metro Council: ' + mc + '<br>US Congressional District: ' + cd + '<br>Public Service Commission: ' + psc + '<br>BESE District: ' + bese + '<br>LA House District: ' + lahouse + '<br>LA Senate District: ' + lasenate)
+      let name = feature.properties.NAME
+      let street = feature.properties.STREET
+      let acres = feature.properties.ACRES
+      let neighborhood = feature.properties.NEIGHBORHOOD_NAME
+      let agency = feature.properties.AGENCY_JURISDICTION
+      layer.bindPopup('Name: ' + name + 'Adress: ' + street + 'Acres: ' + acres + 'Neighborhood: ' + neighborhood + 'Ownership: ' + agency)
   }
   let wardGeojsonOptions = {
     style: wardStyle,
     onEachFeature: onEachFeature
   }
   L.geoJSON(data, wardGeojsonOptions).addTo(nola)
-})
-
-let firstaidURL = 'https://opendata.arcgis.com/datasets/7c64080061a5480288fe64afd1bcea1d_0.geojson'
-jQuery.getJSON(firstaidURL, function (data) {
-  L.geoJSON(data).addTo(nola)
 })
