@@ -1,4 +1,4 @@
-let nola = L.map('nola').setView([29, -90], 10);
+let nola = L.map('nola').setView([29.984177, -90.073657], 12);
       L.tileLayer('https://maps.heigit.org/openmapsurfer/tiles/roads/webmercator/{z}/{x}/{y}.png').addTo(nola);
 let nolaparksUrl = 'https://opendata.arcgis.com/datasets/3273a5f8334d40838681ff0337eddb8c_0.geojson';
 jQuery.getJSON(nolaparksUrl, function (data) {
