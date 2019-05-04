@@ -12,7 +12,7 @@ jQuery.getJSON(nolaparksUrl, function (data) {
       let acres = feature.properties.ACRES
       let neighborhood = feature.properties.NEIGHBORHOOD_NAME
       let agency = feature.properties.AGENCY_JURISDICTION
-      layer.bindPopup('Name: ' + name + 'Adress: ' + street + 'Acres: ' + acres + 'Neighborhood: ' + neighborhood + 'Ownership: ' + agency)
+      layer.bindPopup('Name: ' + name + ' ' + 'Adress: ' + street + ' ' + 'Acres: ' + acres + ' ' + 'Neighborhood: ' + neighborhood + ' ' + 'Ownership: ' + agency)
   }
   let parkGeojsonOptions = {
     style: parkStyle,
