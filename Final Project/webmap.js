@@ -7,7 +7,6 @@ jQuery.getJSON(nolaparksUrl, function (data) {
     let parkColor = 'green'
     {
       color: parkColor,
-      weight: 1.5,
       fillOpacity: 0.3
     }
   }
