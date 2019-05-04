@@ -37,6 +37,7 @@ jQuery.getJSON(ebrDemographicsUrl, function (data) {
   }
   L.geoJSON(data, wardGeojsonOptions).addTo(nola)
 })
+
 let firstaidURL = 'https://opendata.arcgis.com/datasets/7c64080061a5480288fe64afd1bcea1d_0.geojson'
 jQuery.getJSON(routesURL, function (data) {
   L.geoJSON(data).addTo(nola)
